@@ -1,0 +1,81 @@
+set cut_paste_input [stack 0]
+version 13.0 v10
+BackdropNode {
+inputs 0
+name BackdropNode22
+tile_color 0x444a51ff
+label TrackerHelper
+note_font_size 24
+note_font_color 0xffffffff
+selected true
+xpos -1357
+ypos -5728
+bdwidth 417
+bdheight 292
+z_order 1
+}
+push $cut_paste_input
+Denoise2 {
+userMessage "Move the analysis region to analyse noise or press Lock Noise Analysis to disable this message."
+profileCurve {profile {curve 0 x0.125 0 0 0 0 0 0 0 0}}
+serializeKnob "0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 
+18446744073709551615"
+name Denoise1
+selected true
+xpos -1143
+ypos -5691
+}
+Dot {
+name Dot39
+selected true
+xpos -1109
+ypos -5649
+}
+set N385d4000 [stack 0]
+Blur {
+size 30
+name Blur5
+selected true
+xpos -1287
+ypos -5594
+}
+push $N385d4000
+Merge2 {
+inputs 2
+operation difference
+name Merge20
+selected true
+xpos -1143
+ypos -5586
+}
+Grade {
+multiply {{Blur5.size}}
+name Grade4
+selected true
+xpos -1143
+ypos -5525
+}
+Tracker4 {
+center {2132 810}
+black_outside false
+name Tracker5
+selected true
+xpos -1143
+ypos -5488
+}
